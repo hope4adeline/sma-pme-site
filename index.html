@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMA-PME Research — SMA-PME Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@1,6..96,700;1,6..96,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @keyframes breakingBlink {
+      0%, 49% { background: #0f2636; }
+      50%, 100% { background: #0b1c2c; }
+    }
+    .hero-breaking {
+      background: #0f2636 !important;
+      animation: breakingBlink 1s step-start infinite !important;
+      border-top: none !important;
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark"><img src="sma-pme-logo.png" alt="SMA-PME Research" /></div>
+  </a>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-active">Home</a></li>
+    <li><a href="disease.html">The Disease</a></li>
+    <li><a href="about.html">Who We Are</a></li>
+    <li><a href="children.html">Our Children</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="special-events.html">Special Events</a></li>
+    <li><a href="gratitude.html">Gratitude</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-photo">
+    <img src="images/adeline_chat2-1.jpg" alt="" />
+  </div>
+  <div class="hero-noise"></div>
+  <div class="hero-line"></div>
+  <!-- Breaking News — full width top -->
+  <a href="research.html" style="text-decoration: none; display: block;">
+    <div class="hero-breaking">
+      <div class="hero-breaking-label">Recent Events:</div>
+f      <div class="hero-breaking-num">3rd</div>
+      <div class="hero-breaking-text">acDase Global Forum — Save the date &nbsp;<span>April 28, 2026</span></div>
+      <div style="font-size: 15px; font-weight: 700; color: #fff8e7; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,248,231,0.4); border-radius: 6px; padding: 6px 16px; margin-left: 8px; letter-spacing: 0.5px; white-space: nowrap;">→ Check agenda</div>
+    </div>
+  </a>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p style="font-size:13px; font-weight:400; color:rgba(26,18,8,0.75); margin-bottom:24px; letter-spacing:0.5px;">Website Updated: May 13, 2026</p>
+      <div style="margin-bottom:12px; margin-top:-20px;">
+        <img src="sma-pme-logo.png" alt="SMA-PME Research" style="height:120px; width:auto; display:block; margin: 0 auto;" />
+      </div>
+      <h1 class="hero-title">
+        Saving <em>children's</em><br />
+        lives with<br />
+        <strong>breakthrough research</strong>
+      </h1>
+      <p class="hero-desc">
+        We are an approved 501(c)(3) nonprofit dedicated to finding solutions for Spinal Muscular Atrophy with Progressive Myoclonic Epilepsy. Researchers are finding solutions — and children are living in hope of a cure.
+      </p>
+      <div class="hero-actions">
+        <a href="donate.html" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          Support Our Research
+        </a>
+        <a href="children.html" class="btn-secondary">
+          Meet the Children
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-stat-row">
+        <div class="hero-stat-mini" style="grid-column: 1 / -1;">
+          <div class="hero-stat-mini-num">1–4</div>
+          <div class="hero-stat-mini-label">new cases diagnosed every month</div>
+          <div style="font-size: 16px; color: rgba(26,18,8,0.4); margin-top: 8px; letter-spacing: 0.3px; font-style: italic;">Based upon birth prevalence studies</div>
+        </div>
+      </div>
+      <!-- Triangle stratégie -->
+      <div class="hero-triangle-card">
+        <div class="hero-triangle-label">Our current focus</div>
+        <svg class="hero-tri-svg" viewBox="0 0 345 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="triGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="triG" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#e056a0"/>
+              <stop offset="100%" stop-color="#d4855a"/>
+            </linearGradient>
+          </defs>
+          <!-- Triangle — périmètre ≈ 932px → dasharray 960 -->
+          <polygon class="htri-border" points="170,32 12,282 328,282"
+            fill="rgba(255,255,255,0.03)" stroke="url(#triG)" stroke-width="2.5"
+            stroke-linejoin="round" filter="url(#triGlow)"/>
+          <!-- Sommet haut — 2 lignes + coche -->
+          <text class="htri-txt" x="170" y="2" text-anchor="middle">FIND THE</text>
+          <text class="htri-txt" x="170" y="18" text-anchor="middle">CHILDREN</text>
+          <text class="htri-check htri-check-top" x="210" y="10" text-anchor="start" font-size="22" fill="#1a8a3f">≈&#10004;</text>
+          <!-- Bas-gauche — sous le triangle, ovale vert -->
+          <ellipse class="htri-ellipse" cx="22" cy="320" rx="65" ry="24" fill="none" stroke="#1a6b3a" stroke-width="2.5"/>
+          <text class="htri-txt" x="22" y="315" text-anchor="middle">FINANCE</text>
+          <text class="htri-txt" x="22" y="330" text-anchor="middle">THE CURE</text>
+          <!-- Bas-droit — sous le triangle, calé à droite + coche -->
+          <text class="htri-txt" x="295" y="315" text-anchor="middle">STREAMLINE</text>
+          <text class="htri-txt" x="295" y="330" text-anchor="middle">THE RESEARCH</text>
+          <text class="htri-check htri-check-br" x="350" y="322" text-anchor="start" font-size="22" fill="#1a8a3f">&#10004;</text>
+          <!-- Progress! label -->
+          <text class="htri-progress" x="35" y="115" text-anchor="middle">Progress!</text>
+          <!-- Ping bas-gauche (12,282) -->
+          <circle class="htri-ping htri-ping-1" cx="12" cy="282" r="8"/>
+          <circle class="htri-ping-dot htri-dot-1" cx="12" cy="282" r="4" fill="url(#triG)"/>
+          <!-- Ping bas-droit (328,282) -->
+          <circle class="htri-ping htri-ping-2" cx="328" cy="282" r="8"/>
+          <circle class="htri-ping-dot htri-dot-2" cx="328" cy="282" r="4" fill="url(#triG)"/>
+          <!-- Ping sommet (170,32) -->
+          <circle class="htri-ping htri-ping-3" cx="170" cy="32" r="8"/>
+          <circle class="htri-ping-dot htri-dot-3" cx="170" cy="32" r="4" fill="url(#triG)"/>
+          <!-- Hope — centroïde -->
+          <text class="htri-hope" x="170" y="194" text-anchor="middle">Hope</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<div class="mission-band">
+  <div class="mission-band-center">
+    <span class="mission-band-title">This is a race against time.</span>
+    <span class="mission-band-sub">Researchers are finding solutions — and every day counts!</span>
+    <a href="donate.html" class="mission-band-cta">
+      Support now
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<!-- ── DISEASE ── -->
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="text-decoration:none">
+          <div class="nav-logo-mark"><img src="sma-pme-logo.png" alt="SMA-PME Research" /></div>
+        </a>
+        <p>Dedicated to saving children's lives with breakthrough research into Spinal Muscular Atrophy with Progressive Myoclonic Epilepsy and related acid ceramidase deficiencies.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Mission</h5>
+        <ul>
+          <li><a href="disease.html">The Disease</a></li>
+          <li><a href="about.html">Who We Are</a></li>
+          <li><a href="children.html">Our Children</a></li>
+          <li><a href="research.html">Our Research</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get Involved</h5>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="research.html">acDase Global Forum</a></li>
+          <li><a href="contact.html">Volunteer</a></li>
+          <li><a href="contact.html">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="disease.html">Understanding SMA-PME</a></li>
+          <li><a href="disease.html">Farber Disease</a></li>
+          <li><a href="contact.html">Family Support</a></li>
+          <li><a href="contact.html">For Physicians</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SMA-PME Research. All rights reserved. Approved 501(c)(3) nonprofit organization.</p>
+      <div class="footer-501">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        EIN verified nonprofit
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

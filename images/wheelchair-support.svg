@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Blue background -->
+  <rect width="200" height="200" fill="#005faf" rx="16"/>
+
+  <!-- Head -->
+  <circle cx="120" cy="45" r="16" fill="white"/>
+
+  <!-- Body -->
+  <path d="M112,62 L100,100 L130,100 L138,120 L162,120 L162,110 L145,110 L137,90 L130,90 L130,80 L148,72 L144,62 Z" fill="white"/>
+
+  <!-- Big rear wheel -->
+  <circle cx="118" cy="148" r="34" fill="none" stroke="white" stroke-width="10"/>
+  <circle cx="118" cy="148" r="5" fill="white"/>
+
+  <!-- Small front wheel -->
+  <circle cx="88" cy="142" r="14" fill="none" stroke="white" stroke-width="8"/>
+</svg>
