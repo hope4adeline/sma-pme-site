@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff0f6"/>
+      <stop offset="100%" style="stop-color:#fff9e6"/>
+    </linearGradient>
+    <linearGradient id="cakeBot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8c8d4"/>
+      <stop offset="100%" style="stop-color:#f0a0b8"/>
+    </linearGradient>
+    <linearGradient id="cakeMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fde8a0"/>
+      <stop offset="100%" style="stop-color:#f8d060"/>
+    </linearGradient>
+    <linearGradient id="cakeTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8e6f8"/>
+      <stop offset="100%" style="stop-color:#90c8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00000020"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="320" fill="url(#bgGrad)" rx="20"/>
+
+  <!-- Confetti -->
+  <rect x="40" y="30" width="10" height="10" rx="2" fill="#f9a8d4" transform="rotate(20,45,35)"/>
+  <rect x="400" y="20" width="8" height="8" rx="2" fill="#86efac" transform="rotate(-15,404,24)"/>
+  <rect x="430" y="60" width="10" height="10" rx="2" fill="#fde68a" transform="rotate(35,435,65)"/>
+  <rect x="30" y="80" width="8" height="8" rx="2" fill="#93c5fd" transform="rotate(-25,34,84)"/>
+  <rect x="60" y="50" width="6" height="6" rx="1" fill="#c4b5fd" transform="rotate(10,63,53)"/>
+  <rect x="450" y="100" width="6" height="6" rx="1" fill="#f9a8d4" transform="rotate(-30,453,103)"/>
+  <circle cx="70" cy="25" r="5" fill="#fde68a" opacity="0.8"/>
+  <circle cx="410" cy="50" r="4" fill="#86efac" opacity="0.8"/>
+  <circle cx="440" cy="25" r="6" fill="#93c5fd" opacity="0.8"/>
+  <circle cx="25" cy="55" r="4" fill="#f9a8d4" opacity="0.8"/>
+  <rect x="380" y="80" width="8" height="8" rx="2" fill="#c4b5fd" transform="rotate(40,384,84)"/>
+  <rect x="100" y="15" width="7" height="7" rx="2" fill="#86efac" transform="rotate(-10,103,18)"/>
+  <circle cx="350" cy="15" r="4" fill="#fde68a" opacity="0.8"/>
+  <circle cx="130" cy="35" r="5" fill="#f9a8d4" opacity="0.7"/>
+
+  <!-- Plate -->
+  <ellipse cx="240" cy="272" rx="145" ry="16" fill="#e8d5c0" opacity="0.7"/>
+
+  <!-- Bottom tier -->
+  <rect x="90" y="200" width="300" height="70" rx="14" fill="url(#cakeBot)" filter="url(#shadow)"/>
+  <!-- Bottom tier frosting -->
+  <path d="M90,204 Q105,192 120,204 Q135,192 150,204 Q165,192 180,204 Q195,192 210,204 Q225,192 240,204 Q255,192 270,204 Q285,192 300,204 Q315,192 330,204 Q345,192 360,204 Q375,192 390,204 L390,200 L90,200 Z" fill="white" opacity="0.9"/>
+  <!-- Bottom tier dots -->
+  <circle cx="130" cy="232" r="5" fill="white" opacity="0.5"/>
+  <circle cx="175" cy="242" r="5" fill="white" opacity="0.5"/>
+  <circle cx="220" cy="228" r="5" fill="white" opacity="0.5"/>
+  <circle cx="265" cy="240" r="5" fill="white" opacity="0.5"/>
+  <circle cx="310" cy="230" r="5" fill="white" opacity="0.5"/>
+  <circle cx="355" cy="240" r="5" fill="white" opacity="0.5"/>
+
+  <!-- Middle tier -->
+  <rect x="130" y="140" width="220" height="64" rx="12" fill="url(#cakeMid)" filter="url(#shadow)"/>
+  <!-- Middle tier frosting -->
+  <path d="M130,145 Q145,133 160,145 Q175,133 190,145 Q205,133 220,145 Q235,133 250,145 Q265,133 280,145 Q295,133 310,145 Q325,133 340,145 L350,140 L130,140 Z" fill="white" opacity="0.9"/>
+  <!-- Middle tier dots -->
+  <circle cx="165" cy="168" r="4" fill="white" opacity="0.5"/>
+  <circle cx="205" cy="178" r="4" fill="white" opacity="0.5"/>
+  <circle cx="245" cy="165" r="4" fill="white" opacity="0.5"/>
+  <circle cx="285" cy="175" r="4" fill="white" opacity="0.5"/>
+  <circle cx="325" cy="165" r="4" fill="white" opacity="0.5"/>
+
+  <!-- Top tier -->
+  <rect x="168" y="92" width="144" height="52" rx="10" fill="url(#cakeTop)" filter="url(#shadow)"/>
+  <!-- Top tier frosting -->
+  <path d="M168,97 Q180,85 192,97 Q204,85 216,97 Q228,85 240,97 Q252,85 264,97 Q276,85 288,97 Q300,85 312,97 L312,92 L168,92 Z" fill="white" opacity="0.9"/>
+
+  <!-- Candles -->
+  <!-- Candle 1 -->
+  <rect x="196" y="60" width="14" height="36" rx="5" fill="#f472b6"/>
+  <ellipse cx="203" cy="60" rx="7" ry="4" fill="#f9a8d4"/>
+  <!-- Candle 2 -->
+  <rect x="233" y="55" width="14" height="41" rx="5" fill="#a78bfa"/>
+  <ellipse cx="240" cy="55" rx="7" ry="4" fill="#c4b5fd"/>
+  <!-- Candle 3 -->
+  <rect x="270" y="60" width="14" height="36" rx="5" fill="#34d399"/>
+  <ellipse cx="277" cy="60" rx="7" ry="4" fill="#86efac"/>
+
+  <!-- Flames -->
+  <path d="M203,58 C198,50 198,40 203,34 C208,40 208,50 203,58Z" fill="#fbbf24"/>
+  <path d="M203,56 C200,50 200,43 203,38 C206,43 206,50 203,56Z" fill="#fef3c7"/>
+  <path d="M240,53 C235,44 235,34 240,27 C245,34 245,44 240,53Z" fill="#fbbf24"/>
+  <path d="M240,51 C237,44 237,37 240,31 C243,37 243,44 240,51Z" fill="#fef3c7"/>
+  <path d="M277,58 C272,50 272,40 277,34 C282,40 282,50 277,58Z" fill="#fbbf24"/>
+  <path d="M277,56 C274,50 274,43 277,38 C280,43 280,50 277,56Z" fill="#fef3c7"/>
+
+  <!-- "Happy Birthday!" text -->
+  <text x="240" y="305" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="bold" fill="#be185d" text-anchor="middle" letter-spacing="1">Happy Birthday!</text>
+</svg>

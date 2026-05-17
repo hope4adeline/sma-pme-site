@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sofia's Journey — SMA-PME Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@1,6..96,700;1,6..96,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cs-slideshow { position: relative; height: 100vh; min-height: 620px; overflow: hidden; padding-top: 70px; box-sizing: border-box; }
+    .cs-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease; z-index: 0; }
+    .cs-slide.active { opacity: 1; z-index: 1; }
+    .cs-slide-bg { position: absolute; inset: -8%; z-index: 0; overflow: hidden; }
+    .cs-slide-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center center; filter: blur(24px) brightness(0.35) saturate(0.6); display: block; }
+    .cs-slide-img { position: absolute; top: 70px; left: 0; width: 100%; height: calc(100% - 70px); object-fit: contain; object-position: center center; display: block; z-index: 1; }
+    .cs-slideshow-gradient { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to right, rgba(20,12,4,0.78) 0%, rgba(20,12,4,0.38) 46%, transparent 68%), linear-gradient(to top, rgba(20,12,4,0.68) 0%, transparent 40%); }
+    .cs-slideshow-content { position: absolute; bottom: 72px; left: 0; z-index: 3; max-width: 580px; padding: 0 60px; }
+    .cs-breadcrumb { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,210,140,0.82); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .cs-breadcrumb a { color: rgba(255,210,140,0.82); text-decoration: none; }
+    .cs-breadcrumb a:hover { color: #fff; text-decoration: underline; }
+    .cs-updated { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; margin-bottom: 12px; }
+    .cs-name { font-family: var(--serif); font-size: clamp(72px, 10vw, 120px); font-weight: 300; font-style: italic; color: #fff8e7; line-height: 0.88; margin-bottom: 16px; letter-spacing: -2px; }
+    .cs-tagline { font-size: 13px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,248,231,0.45); margin-bottom: 26px; }
+    .cs-meta { display: flex; flex-direction: column; gap: 8px; }
+    .cs-meta-row { display: flex; align-items: baseline; gap: 12px; }
+    .cs-meta-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.38); min-width: 90px; }
+    .cs-meta-value { font-family: var(--serif); font-size: 17px; font-weight: 400; color: rgba(255,248,231,0.85); }
+    .cs-meta-value.cs-diagnosis { color: var(--amber); font-weight: 500; }
+    .cs-slide-prev, .cs-slide-next { position: absolute; top: 50%; transform: translateY(-50%); z-index: 4; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); color: #fff; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; font-size: 22px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .cs-slide-prev { left: 28px; }
+    .cs-slide-next { right: 28px; }
+    .cs-slide-prev:hover, .cs-slide-next:hover { background: rgba(255,255,255,0.22); transform: translateY(-50%) scale(1.07); }
+    .cs-slide-dots { position: absolute; bottom: 28px; right: 48px; z-index: 4; display: flex; gap: 9px; align-items: center; }
+    .cs-dot { width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.32); cursor: pointer; padding: 0; transition: background 0.3s, transform 0.3s; }
+    .cs-dot.active { background: #fff; transform: scale(1.35); }
+    .cs-slide-counter { position: absolute; top: calc(70px + 24px); right: 48px; z-index: 4; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; color: rgba(255,255,255,0.38); }
+    .cs-progress { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: rgba(255,255,255,0.1); z-index: 5; }
+    .cs-progress-fill { height: 100%; width: 0%; background: rgba(255,255,255,0.6); }
+    .cs-journey { background: #fff; padding: 90px 0; }
+    .cs-journey-inner { max-width: 720px; margin: 0 auto; padding: 0 40px; }
+    .cs-section-label { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; }
+    .cs-section-title { font-family: var(--serif); font-size: clamp(32px, 4vw, 48px); font-weight: 300; font-style: italic; color: #1a1208; margin-bottom: 48px; line-height: 1.1; }
+    .cs-journey-inner p { font-family: var(--serif); font-size: 20px; font-weight: 400; line-height: 1.85; color: #2a2015; margin-bottom: 28px; }
+    .cs-journey-inner p:first-of-type::first-letter { font-size: 5em; font-weight: 300; font-style: italic; float: left; line-height: 0.75; margin: 6px 10px 0 0; color: var(--amber); font-family: var(--serif); }
+    .cs-pull { border-left: 3px solid var(--amber); padding: 10px 0 10px 28px; margin: 44px 0; }
+    .cs-pull p { font-family: var(--serif) !important; font-size: 25px !important; font-style: italic; color: #1a1208 !important; line-height: 1.5 !important; margin-bottom: 0 !important; }
+    .cs-pull p::first-letter { all: unset !important; float: none !important; }
+    .cs-cta { background: linear-gradient(135deg, #1a1208 0%, #2a1a08 100%); padding: 90px 40px; text-align: center; }
+    .cs-cta-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,248,231,0.45); margin-bottom: 20px; }
+    .cs-cta h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 56px); font-weight: 300; font-style: italic; color: #fff8e7; line-height: 1.15; margin-bottom: 10px; }
+    .cs-cta-sub { font-family: var(--serif); font-size: 22px; font-style: italic; color: rgba(255,248,231,0.55); margin-bottom: 40px; }
+    .cs-cta-sub em { color: var(--amber-lt); font-style: italic; }
+    .cs-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cs-btn-donate { display: inline-flex; align-items: center; gap: 10px; background: var(--amber); color: #fff8e7; padding: 16px 32px; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .cs-btn-donate:hover { background: var(--amber-lt); transform: translateY(-2px); }
+    .cs-btn-back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,248,231,0.6); border: 1px solid rgba(255,248,231,0.25); padding: 16px 32px; border-radius: 50px; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; text-decoration: none; transition: color 0.2s, border-color 0.2s; }
+    .cs-btn-back:hover { color: #fff8e7; border-color: rgba(255,248,231,0.6); }
+    @media (max-width: 900px) {
+      .cs-slideshow-content { padding: 0 32px; bottom: 60px; max-width: 100%; }
+      .cs-slide-prev { left: 12px; }
+      .cs-slide-next { right: 12px; }
+      .cs-slide-dots { right: 24px; bottom: 20px; }
+      .cs-slide-counter { right: 24px; }
+      .cs-journey-inner { padding: 0 24px; }
+    }
+    @media (max-width: 540px) {
+      .cs-name { font-size: 64px; }
+      .cs-slideshow-content { bottom: 52px; padding: 0 20px; }
+      .cs-slide-prev, .cs-slide-next { width: 40px; height: 40px; font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark"><img src="sma-pme-logo.png" alt="SMA-PME Research" /></div>
+  </a>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="disease.html">The Disease</a></li>
+    <li><a href="about.html">Who We Are</a></li>
+    <li><a href="children.html" class="nav-active">Our Children</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="special-events.html">Special Events</a></li>
+    <li><a href="gratitude.html">Gratitude</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO SLIDESHOW ── -->
+<section class="cs-slideshow" id="cs-slideshow">
+
+  <div class="cs-slide active">
+    <div class="cs-slide-bg"><img src="https://sma-pme-org.pages.dev/images/img_0136.jpeg" alt="" aria-hidden="true" /></div>
+    <img class="cs-slide-img" src="https://sma-pme-org.pages.dev/images/img_0136.jpeg" alt="Sofia" />
+  </div>
+  <div class="cs-slide">
+    <div class="cs-slide-bg"><img src="https://sma-pme-org.pages.dev/images/img_2738.jpeg" alt="" aria-hidden="true" /></div>
+    <img class="cs-slide-img" src="https://sma-pme-org.pages.dev/images/img_2738.jpeg" alt="Sofia" />
+  </div>
+  <div class="cs-slide">
+    <div class="cs-slide-bg"><img src="https://sma-pme-org.pages.dev/images/img_4138.jpeg" alt="" aria-hidden="true" /></div>
+    <img class="cs-slide-img" src="https://sma-pme-org.pages.dev/images/img_4138.jpeg" alt="Sofia" />
+  </div>
+
+  <div class="cs-slideshow-gradient"></div>
+
+  <div class="cs-slideshow-content fade-up">
+    <div class="cs-breadcrumb"><a href="children.html">← All Children</a></div>
+    <p class="cs-updated">Updated: April 16, 2024</p>
+    <h1 class="cs-name">Sofia</h1>
+    <p class="cs-tagline">Bringing smiles daily</p>
+    <div class="cs-meta">
+      <div class="cs-meta-row">
+        <span class="cs-meta-label">Born</span>
+        <span class="cs-meta-value">February 2021</span>
+      </div>
+      <div class="cs-meta-row">
+        <span class="cs-meta-label">Condition</span>
+        <span class="cs-meta-value cs-diagnosis">SMA-PME</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="cs-slide-counter"><span id="cs-current">1</span> / 3</span>
+  <button class="cs-slide-prev" aria-label="Previous photo">&#8249;</button>
+  <button class="cs-slide-next" aria-label="Next photo">&#8250;</button>
+  <div class="cs-slide-dots">
+    <button class="cs-dot active" data-index="0" aria-label="Photo 1"></button>
+    <button class="cs-dot" data-index="1" aria-label="Photo 2"></button>
+    <button class="cs-dot" data-index="2" aria-label="Photo 3"></button>
+  </div>
+  <div class="cs-progress"><div class="cs-progress-fill" id="cs-progress-fill"></div></div>
+
+</section>
+
+<!-- ── SOFIA'S JOURNEY ── -->
+<section class="cs-journey">
+  <div class="cs-journey-inner">
+    <div class="cs-section-label">Her Story</div>
+    <h2 class="cs-section-title">Sofia's Journey</h2>
+
+    <p>Born in February 2021, Sofia is the younger sister of Megan — and together, they are one family living with a double diagnosis that few in the world have faced. Both sisters carry mutations in the ASAH1 gene, the molecular source of acid ceramidase deficiency that drives SMA-PME. Their family has shown what strength looks like in the face of the unimaginable.</p>
+
+    <div class="cs-pull">
+      <p>"Two sisters. The same rare gene. A family that faces it together — and a community that refuses to let them face it alone."</p>
+    </div>
+
+    <p>Sofia's full story is coming soon. She is one of ten children in our community whose lives depend on the breakthroughs this research is working toward. Every contribution, every connection, every day of research done is a step toward a future where Sofia — and every child like her — can thrive.</p>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cs-cta">
+  <p class="cs-cta-eyebrow">Join Our Mission</p>
+  <h2>For Sofia.</h2>
+  <p class="cs-cta-sub">For every child like <em>her</em>.</p>
+  <div class="cs-cta-btns">
+    <a href="donate.html" class="cs-btn-donate">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      Support the Research
+    </a>
+    <a href="children.html" class="cs-btn-back">Meet More Children →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="text-decoration:none">
+          <div class="nav-logo-mark"><img src="sma-pme-logo.png" alt="SMA-PME Research" /></div>
+        </a>
+        <p>Dedicated to saving children's lives with breakthrough research into Spinal Muscular Atrophy with Progressive Myoclonic Epilepsy and related acid ceramidase deficiencies.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Mission</h5>
+        <ul>
+          <li><a href="disease.html">The Disease</a></li>
+          <li><a href="about.html">Who We Are</a></li>
+          <li><a href="children.html">Our Children</a></li>
+          <li><a href="research.html">Our Research</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get Involved</h5>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="research.html">acDase Global Forum</a></li>
+          <li><a href="contact.html">Volunteer</a></li>
+          <li><a href="contact.html">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="disease.html">Understanding SMA-PME</a></li>
+          <li><a href="disease.html">Farber Disease</a></li>
+          <li><a href="contact.html">Family Support</a></li>
+          <li><a href="contact.html">For Physicians</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SMA-PME Research. All rights reserved. Approved 501(c)(3) nonprofit organization.</p>
+      <div class="footer-501">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        EIN verified nonprofit
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+(function () {
+  var el = document.getElementById('cs-slideshow');
+  if (!el) return;
+  var slides  = el.querySelectorAll('.cs-slide');
+  var dots    = el.querySelectorAll('.cs-dot');
+  var counter = document.getElementById('cs-current');
+  var fill    = document.getElementById('cs-progress-fill');
+  var current = 0; var timer; var INTERVAL = 2000;
+  function animateProgress() { if (!fill) return; fill.style.transition = 'none'; fill.style.width = '0%'; requestAnimationFrame(function () { requestAnimationFrame(function () { fill.style.transition = 'width ' + INTERVAL + 'ms linear'; fill.style.width = '100%'; }); }); }
+  function pauseProgress() { if (!fill) return; var w = fill.getBoundingClientRect().width / fill.parentNode.getBoundingClientRect().width * 100; fill.style.transition = 'none'; fill.style.width = w + '%'; }
+  function goTo(n) { slides[current].classList.remove('active'); dots[current].classList.remove('active'); current = (n + slides.length) % slides.length; slides[current].classList.add('active'); dots[current].classList.add('active'); if (counter) counter.textContent = current + 1; }
+  function next() { goTo(current + 1); } function prev() { goTo(current - 1); }
+  function startTimer() { animateProgress(); timer = setInterval(function () { next(); animateProgress(); }, INTERVAL); }
+  function resetTimer() { clearInterval(timer); startTimer(); }
+  el.querySelector('.cs-slide-next').addEventListener('click', function () { next(); resetTimer(); });
+  el.querySelector('.cs-slide-prev').addEventListener('click', function () { prev(); resetTimer(); });
+  dots.forEach(function (dot) { dot.addEventListener('click', function () { goTo(parseInt(this.dataset.index, 10)); resetTimer(); }); });
+  el.addEventListener('mouseenter', function () { clearInterval(timer); pauseProgress(); });
+  el.addEventListener('mouseleave', function () { fill.style.transition = 'none'; fill.style.width = '0%'; requestAnimationFrame(function () { requestAnimationFrame(function () { fill.style.transition = 'width ' + INTERVAL + 'ms linear'; fill.style.width = '100%'; }); }); timer = setInterval(function () { next(); animateProgress(); }, INTERVAL); });
+  startTimer();
+}());
+</script>
+</body>
+</html>
