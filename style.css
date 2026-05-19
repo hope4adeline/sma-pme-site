@@ -2496,6 +2496,7 @@
       .donate { padding: 100px 0 80px; }
       .donate-inner { padding: 0 20px; }
       .gifts-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+      .donate-ctas-grid { grid-template-columns: 1fr !important; }
       .donate-methods-2col { grid-template-columns: 1fr !important; }
       .donate-orange-box { padding: 40px 20px !important; }
       .donate-corp-box { padding: 40px 20px !important; }
