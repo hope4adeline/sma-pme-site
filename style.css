@@ -134,7 +134,7 @@
       left: 0;
       right: 0;
       width: 100%;
-      display: flex; align-items: center; justify-content: center; gap: 24px;
+      display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap;
       background: linear-gradient(90deg, #163554 0%, #0f2a48 100%);
       border-bottom: 1px solid rgba(255,248,231,0.2);
       border-left: 4px solid #d4855a;
