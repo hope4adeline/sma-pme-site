@@ -1586,6 +1586,13 @@
       padding: 0;
       background: transparent;
     }
+    .footnotes {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(26,18,8,0.15);
+      font-size: 13px;
+      color: rgba(26,18,8,0.55);
+    }
     .links-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
