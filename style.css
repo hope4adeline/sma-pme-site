@@ -2405,6 +2405,7 @@
       }
       .hero-breaking-num { font-size: 16px; }
       .hero-breaking-text { font-size: 13px; text-align: center; }
+      .hero-breaking-text span { white-space: nowrap; }
       .hero-breaking > div:last-child { width: 100%; text-align: center; }
       .hero-content {
         flex-direction: column;
