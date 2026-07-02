@@ -747,13 +747,8 @@
     .htri-check-top { animation: fadeHope 0.5s ease forwards 4.5s; }
     /* Bas-droit (328,282) → deuxième coche (1.2s après FIND) */
     .htri-check-br  { animation: fadeHope 0.5s ease forwards 5.7s; }
-    /* Bas-gauche (12,282) → cercle, dernier (1.5s après STREAMLINE) */
-    .htri-ellipse {
-      stroke-dasharray: 320;
-      stroke-dashoffset: 320;
-      animation: drawEllipse 0.8s ease forwards 7.2s;
-    }
-    @keyframes drawEllipse { to { stroke-dashoffset: 0; } }
+    /* Bas-gauche (12,282) → coche, dernière (1.5s après STREAMLINE) */
+    .htri-check-bl  { animation: fadeHope 0.5s ease forwards 7.2s; }
     .htri-progress {
       font-family: var(--serif);
       font-size: 32px;
