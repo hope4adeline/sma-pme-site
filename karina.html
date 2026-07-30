@@ -4,6 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karina's Journey — SMA-PME Research</title>
+  <meta name="description" content="Follow Karina's journey with SMA-PME (Spinal Muscular Atrophy with Progressive Myoclonic Epilepsy) and see how SMA-PME Research is fighting for a cure." />
+  <link rel="canonical" href="https://sma-pme.org/karina.html" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Karina's Journey — SMA-PME Research" />
+  <meta property="og:description" content="Follow Karina's journey with SMA-PME (Spinal Muscular Atrophy with Progressive Myoclonic Epilepsy) and see how SMA-PME Research is fighting for a cure." />
+  <meta property="og:image" content="https://sma-pme.org/images/preview.jpg" />
+  <meta property="og:url" content="https://sma-pme.org/karina.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Karina's Journey — SMA-PME Research" />
+  <meta name="twitter:description" content="Follow Karina's journey with SMA-PME (Spinal Muscular Atrophy with Progressive Myoclonic Epilepsy) and see how SMA-PME Research is fighting for a cure." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@1,6..96,700;1,6..96,900&display=swap" rel="stylesheet" />
@@ -421,7 +433,7 @@
 
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark"><img src="sma-pme-logo.png" alt="SMA-PME Research" /></div>
+    <div class="nav-logo-mark"><img src="sma-pme-logo.png" alt="SMA-PME Research" loading="lazy"  width="901" height="560" /></div>
   </a>
   <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -443,16 +455,16 @@
 <section class="cs-slideshow" id="cs-slideshow">
 
   <div class="cs-slide active">
-    <div class="cs-slide-bg"><img src="https://sma-pme-org.pages.dev/images/karina-bunny-rabbit-ears-2.jpg" alt="" aria-hidden="true" /></div>
-    <img class="cs-slide-img" src="https://sma-pme-org.pages.dev/images/karina-bunny-rabbit-ears-2.jpg" alt="Karina with bunny ears" />
+    <div class="cs-slide-bg"><img src="images/karina-bunny-rabbit-ears-2.webp" alt="" aria-hidden="true" loading="lazy"  width="1600" height="2133" /></div>
+    <img class="cs-slide-img" src="images/karina-bunny-rabbit-ears-2.webp" alt="Karina with bunny ears" loading="lazy"  width="1600" height="2133" />
   </div>
   <div class="cs-slide">
-    <div class="cs-slide-bg"><img src="https://sma-pme-org.pages.dev/images/karina-ice-cream-cone-2.jpg" alt="" aria-hidden="true" /></div>
-    <img class="cs-slide-img" src="https://sma-pme-org.pages.dev/images/karina-ice-cream-cone-2.jpg" alt="Karina with an ice cream cone" />
+    <div class="cs-slide-bg"><img src="images/karina-ice-cream-cone-2.jpg" alt="" aria-hidden="true" loading="lazy"  width="1170" height="2532" /></div>
+    <img class="cs-slide-img" src="images/karina-ice-cream-cone-2.jpg" alt="Karina with an ice cream cone" loading="lazy"  width="1170" height="2532" />
   </div>
   <div class="cs-slide">
-    <div class="cs-slide-bg"><img src="https://sma-pme-org.pages.dev/images/karina-christmas-brick-fireplace-2.jpg" alt="" aria-hidden="true" /></div>
-    <img class="cs-slide-img" src="https://sma-pme-org.pages.dev/images/karina-christmas-brick-fireplace-2.jpg" alt="Karina at Christmas" />
+    <div class="cs-slide-bg"><img src="images/karina-christmas-brick-fireplace-2.jpg" alt="" aria-hidden="true" loading="lazy"  width="4284" height="5712" /></div>
+    <img class="cs-slide-img" src="images/karina-christmas-brick-fireplace-2.jpg" alt="Karina at Christmas" loading="lazy"  width="4284" height="5712" />
   </div>
 
   <div class="cs-slideshow-gradient"></div>
@@ -603,7 +615,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="text-decoration:none">
-          <div class="nav-logo-mark"><img src="sma-pme-logo.png" alt="SMA-PME Research" /></div>
+          <div class="nav-logo-mark"><img src="sma-pme-logo.png" alt="SMA-PME Research" loading="lazy"  width="901" height="560" /></div>
         </a>
         <p>Dedicated to saving children's lives with breakthrough research into Spinal Muscular Atrophy with Progressive Myoclonic Epilepsy and related acid ceramidase deficiencies.</p>
       </div>
@@ -703,19 +715,6 @@
       goTo(parseInt(this.dataset.index, 10));
       resetTimer();
     });
-  });
-
-  el.addEventListener('mouseenter', function () { clearInterval(timer); pauseProgress(); });
-  el.addEventListener('mouseleave', function () {
-    fill.style.transition = 'none';
-    fill.style.width = '0%';
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        fill.style.transition = 'width ' + INTERVAL + 'ms linear';
-        fill.style.width = '100%';
-      });
-    });
-    timer = setInterval(function () { next(); animateProgress(); }, INTERVAL);
   });
 
   startTimer();
