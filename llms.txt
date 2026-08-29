@@ -17,7 +17,7 @@ Three-pronged strategy: Find the Children (identify undiagnosed cases worldwide)
 - [Home](https://sma-pme.org/): Mission overview and current statistics.
 - [The Disease](https://sma-pme.org/disease.html): Genetic origin, biological consequences, and clinical presentation of SMA-PME.
 - [Who We Are](https://sma-pme.org/about.html): About the organization and its founders.
-- [Our Children](https://sma-pme.org/children.html): Profiles of children living with SMA-PME/Farber disease (Adeline, Brayden, Karina, Kyndall, Megan, Noah, Sofia, Weston, Zayd).
+- [Our Children](https://sma-pme.org/children.html): Profiles of children living with SMA-PME/Farber disease (Adeline, Brayden, Karina, Khang, Kyndall, Megan, Noah, Sofia, Weston, Zayd).
 - [Research](https://sma-pme.org/research.html): Research funded by the organization and the ACDase Deficiency Global Forum.
 - [Special Events](https://sma-pme.org/special-events.html): Fundraising events.
 - [Gratitude](https://sma-pme.org/gratitude.html): Acknowledgment of donors and supporters.
