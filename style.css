@@ -1901,6 +1901,57 @@
       margin-bottom: 60px;
       text-align: left;
     }
+    .event-podcast {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      background: linear-gradient(135deg, rgba(212,133,90,0.14), rgba(212,133,90,0.05));
+      border: 2px solid var(--amber);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+    .event-podcast-icon {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--amber);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .event-podcast-body {
+      flex: 1;
+      min-width: 0;
+    }
+    .event-podcast-label {
+      color: var(--amber);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .event-podcast h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      color: var(--navy);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    .event-podcast .btn-amber {
+      flex-shrink: 0;
+    }
+    @media (max-width: 700px) {
+      .event-podcast {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 16px;
+      }
+    }
     .events-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
