@@ -1363,11 +1363,13 @@
       color: var(--amber);
     }
     .children-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
     }
     .child-card {
+      flex: 0 0 calc(20% - 16px);
       position: relative;
       border-radius: 20px;
       overflow: hidden;
@@ -2351,7 +2353,7 @@
       .disease-grid { grid-template-columns: 1fr; gap: 50px; }
       .disease-grid > div:last-child { padding-left: 0; border-left: none; }
       .research-layout { grid-template-columns: 1fr; gap: 40px; }
-      .children-grid { grid-template-columns: repeat(3, 1fr); }
+      .children-grid .child-card { flex-basis: calc(33.333% - 13.34px); }
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
     }
@@ -2562,7 +2564,7 @@
       .donate-corp-box { padding: 40px 20px !important; }
 
       /* ── CHILDREN MOBILE ── */
-      .children-grid { grid-template-columns: repeat(2, 1fr); }
+      .children-grid .child-card { flex-basis: calc(50% - 10px); }
 
       /* ── MANIFESTO MOBILE ── */
       .manifesto-inner { padding: 28px 20px; }
