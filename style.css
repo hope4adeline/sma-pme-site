@@ -254,6 +254,34 @@
       max-width: 520px;
       margin-bottom: 32px;
     }
+    .hero-events {
+      max-width: 520px;
+      background: linear-gradient(135deg, rgba(212,133,90,0.18), rgba(212,133,90,0.08));
+      border: 1px solid rgba(212,133,90,0.45);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+    }
+    .hero-events-label {
+      color: var(--amber);
+      font-size: 13px; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .hero-events p {
+      color: #1a1208;
+      font-size: 15px; line-height: 1.6;
+      margin: 0 0 6px;
+    }
+    .hero-events-link {
+      display: inline-block;
+      margin-top: 6px;
+      color: var(--amber);
+      font-size: 15px; font-weight: 700;
+      text-decoration: none;
+    }
+    .hero-events-link:hover { text-decoration: underline; }
     .hero-actions {
       display: flex; gap: 16px; flex-wrap: wrap;
     }
@@ -2060,6 +2088,40 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 1.8;
+    }
+    .event-market {
+      align-items: center;
+      text-align: center;
+    }
+    .event-market-details {
+      color: var(--navy) !important;
+      font-size: 16px !important;
+      line-height: 1.7;
+    }
+    .event-market .event-cta {
+      color: var(--amber);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .event-flyer {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      margin: 8px auto 20px;
+      border: 2px solid var(--amber);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .event-flyer:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212,133,90,0.25);
+    }
+    .event-flyer img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     .event-cta {
       background: linear-gradient(135deg, rgba(212,133,90,0.12), rgba(212,133,90,0.06));
